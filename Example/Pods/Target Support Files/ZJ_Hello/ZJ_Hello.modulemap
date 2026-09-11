@@ -1,6 +1,0 @@
-framework module ZJ_Hello {
-  umbrella header "ZJ_Hello-umbrella.h"
-
-  export *
-  module * { export * }
-}
