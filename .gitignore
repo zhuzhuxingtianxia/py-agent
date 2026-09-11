@@ -101,7 +101,9 @@ cython_debug/
 .idea/
 
 # Environments
+.env
 .venv
+env/
 venv/
 venv.bak/
 
