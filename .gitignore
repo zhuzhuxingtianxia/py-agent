@@ -101,11 +101,13 @@ cython_debug/
 .idea/
 
 # Environments
-#.env
+.env
 .venv
 env/
 venv/
 venv.bak/
+# 但保留配置模板文件（供团队成员参考）
+!.env.example
 
 # Logs
 logs
