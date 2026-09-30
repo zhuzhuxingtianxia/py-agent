@@ -8,7 +8,6 @@ LangChain相关内容学习
 
 
 ## 项目学习
-#### Requirements
 
 ## Installation
 
