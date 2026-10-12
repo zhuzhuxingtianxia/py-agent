@@ -9,3 +9,5 @@ uvicorn
 sse-starlette
 streamlit
 requests
+tavily-python
+langchain-community

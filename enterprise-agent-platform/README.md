@@ -80,6 +80,11 @@
       │   │   └── hybrid_retriever.py    # Day 2: Dense+BM25+Rerank 混合 RAG 引擎
       │   ├── agent/
       │   │   └── langgraph_workflow.py  # Day 3: LangGraph 状态图与 Python 代码沙箱
+      │   ├── tools/
+      │   │    ├── __init__.py          # 统一导出所有工具列表
+      │   │    ├── math_tools.py        # 数学与数据分析类工具
+      │   │    ├── db_tools.py          # 企业内部数据库/业务查询工具
+      │   │    └── third_party.py       # 外部/第三方集成工具 (如 Web Search)
       │   ├── api/
       │   │   └── main.py                # Day 4: FastAPI SSE 异步流式网关
       │   └── ui/
