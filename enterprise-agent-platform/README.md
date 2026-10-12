@@ -186,12 +186,12 @@ Agent 的当前状态（State）与执行 Checkpoint 独立存储在 Redis 中�
 
 ## 企业级 Agent 平台生产验收评估指标体系
 
-|评估维度|核心指标 (Metrics)|生产合格标准| 优化调优手段  |
-|---|---|---|---------|
-|RAG 知识检索能力|Hits@K (召回率) / MRR (平均倒数排名)|Top-3 召回率 $> 85\%$|引入 Dense + Sparse (BM25) 双路召回与 Cross-Encoder Reranker。|
-|Agent 路由与控制|Router Accuracy (意图路由准确率)|路由准确率 $> 95\%$|使用 Few-Shot Prompting，或将意图分类微调（QLoRA）进基座模型。|
-|推理吞吐与延迟|TTFT (首字延迟) & TPS (每秒 Token 输出)|TTFT $< 1.5\text{s}$，TPS $> 25\text{ tokens/s}$|采用 vLLM 引擎（PagedAttention & Continuous Batching）配合 AWQ/GGUF 量化。|
-|系统安全性与稳定性|Code Sandbox 逃逸率 / SSE 断连重连率|沙箱逃逸率 $= 0\%$，接口可用性 $> 99.9\%$|使用 Docker 隔离沙箱，FastAPI SSE 增加 心跳包（Heartbeat）与自动重连机制。|
+| 评估维度        | 核心指标 (Metrics)                  | 生产合格标准                                          | 优化调优手段                                                          |
+|-------------|---------------------------------|-------------------------------------------------|-----------------------------------------------------------------|
+| RAG 知识检索能力  | Hits@K (召回率) / MRR (平均倒数排名)     | Top-3 召回率 $> 85\%$                              | 引入 Dense + Sparse (BM25) 双路召回与 Cross-Encoder Reranker。          |
+| Agent 路由与控制 | Router Accuracy (意图路由准确率)       | 路由准确率 $> 95\%$                                  | 使用 Few-Shot Prompting，或将意图分类微调（QLoRA）进基座模型。                     |
+| 推理吞吐与延迟     | TTFT (首字延迟) & TPS (每秒 Token 输出) | TTFT $< 1.5\text{s}$，TPS $> 25\text{ tokens/s}$ | 采用 vLLM 引擎（PagedAttention & Continuous Batching）配合 AWQ/GGUF 量化。 |
+| 系统安全性与稳定性   | Code Sandbox 逃逸率 / SSE 断连重连率    | 沙箱逃逸率 $= 0\%$，接口可用性 $> 99.9\%$                  | 使用 Docker 隔离沙箱，FastAPI SSE 增加 心跳包（Heartbeat）与自动重连机制。            |
 
 #### 项目部署
 一键启动脚本 `scripts/run_all.sh`
