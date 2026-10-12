@@ -1,0 +1,11 @@
+qdrant-client
+rank_bm25
+sentence-transformers
+langchain-core
+langchain-openai
+langgraph
+fastapi
+uvicorn
+sse-starlette
+streamlit
+requests
